@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" type="image/png" sizes="96x96" href="./images/favicon-96x96.png">
+  <title>Rock, Paper, Scissors</title>
+</head>
+<body>
+  <main class="main">
+    <div class="container">
+      <div class="main_display">
+        <div class="display_img">
+          <img src="/images/logo.svg" alt="Logo">
+        </div>
+        <div class="display_counter">
+          <span class="display_text">SCORE</span>
+          <span id="display_current">10</span>
+        </div>
+      </div>
+
+      <div class="game_elem">
+        <div class="overlay hidden"></div>
+        <div class="modal hidden">
+          
+          <div class="modal_header">
+            <span class="modal_text">Rules</span>
+          <div class="modal_close"><img src="/images/icon-close.svg" alt=""></div>
+          </div>
+          <img src="/images/image-rules.svg" alt="" class="rules_img">
+        </div>
+        
+        <div class="choice paper" data-choice="paper">
+          <img src="/images/icon-paper.svg" alt="" class="circle circle_paper">
+        </div>
+        <div class="choice rock" data-choice="rock">
+          <img src="/images/icon-rock.svg" alt="" class="circle circle_rock">
+        </div>
+        <img src="/images/bg-triangle.svg" alt="" class="game_triangle">
+        <div class="choice scissors" data-choice="scissors">
+          <img src="/images/icon-scissors.svg" alt="" class="circle circle_scissors">
+        </div>
+      </div>
+    </div>
+
+    <div id="choice" class="hidden">
+      <div class="choice_container">
+        <div class="you_result">
+          <p>Your choice: <span id="playerSelection"></span></p>
+          <div id="player_img_container"></div>
+        </div>
+
+        <div class="result hidden">
+          <p class="result_text" id="resultText">YOU LOSE</p>
+          <button class="result_btn">PLAY AGAIN</button>
+        </div>
+
+        <div class="computer_result">
+          <p>Computer's choice: <span id="computerSelection"></span></p>
+          <div id="computer_img_container"></div>
+        </div>
+      </div>
+    </div>
+    <div class="wrapper-rules">
+      <button class="rules">rules</button>
+
+    </div>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
